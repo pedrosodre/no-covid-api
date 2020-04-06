@@ -16,16 +16,16 @@
         <img src="https://img.shields.io/github/package-json/v/pedrosodre/no-covid-api" alt="API Version" />
     </a>
     <a>
-        <img src="https://sonarcloud.io/api/project_badges/measure?project=pedrosodre_no-covid-api&metric=alert_status" alt="SonarCloud">
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=no-covid-api&metric=alert_status" alt="SonarCloud">
     </a>
     <a>
-        <img src="https://sonarcloud.io/api/project_badges/measure?project=pedrosodre_no-covid-api&metric=security_rating" alt="SonarCloud">
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=no-covid-api&metric=security_rating" alt="SonarCloud">
     </a>
     <a>
-        <img src="https://sonarcloud.io/api/project_badges/measure?project=pedrosodre_no-covid-api&metric=coverage" alt="SonarCloud">
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=no-covid-api&metric=coverage" alt="SonarCloud">
     </a>
     <a>
-        <img src="https://sonarcloud.io/api/project_badges/measure?project=pedrosodre_no-covid-api&metric=bugs" alt="SonarCloud">
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=no-covid-api&metric=bugs" alt="SonarCloud">
     </a>
     <a href="LICENSE">
         <img src="https://img.shields.io/github/license/pedrosodre/no-covid-api" alt="License" />
