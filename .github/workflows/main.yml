@@ -22,6 +22,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
+    - run: cp .env.example .env
     - run: npm run test:e2e
     - run: npm run test:cov
     - run: npm install -g sonarqube-scanner
