@@ -6,31 +6,23 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [12.x]
+
     steps:
-    - name: Setup Node
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
-
-    - name: Install Dependencies
-      run: npm install
-      working-directory: ./
-
-    - name: Run e2e tests
-      run: npm run test:e2e
-      working-directory: ./
-
-    - name: Run unit tests (with coverage)
-      run: npm run test:cov
-      working-directory: ./
-
-    - name: Install SonarQube
-      run: npm install -g sonarqube-scanner
-
-    - name: Run Sonar Scanner
-      run: sonar-scanner -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-      working-directory: ./
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run test:e2e
+    - run: npm run test:cov
+    - run: npm install -g sonarqube-scanner
+    - run: sonar-scanner -Dsonar.login=${{ secrets.SONAR_TOKEN }}
