@@ -1,0 +1,32 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run e2e tests
+      run: npm run test:e2e
+
+    - name: Run unit tests (with coverage)
+      run: npm run test:cov
+
+    - name: Install SonarQube
+      run: npm install -g sonarqube-scanner
+
+    - name: Run Sonar Scanner
+      run: sonar-scanner -Dsonar.login=${{ secrets.SONAR_TOKEN }}
