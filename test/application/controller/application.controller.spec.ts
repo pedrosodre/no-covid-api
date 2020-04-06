@@ -1,8 +1,4 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { ApplicationController } from '../../../src/application/controller/application.controller';
-import { ApplicationService } from '../../../src/domain/service/application.service';
-import { applicationProviders } from '../../../src/infrastructure/provider/application.provider';
-import { JwtService } from '@nestjs/jwt';
 
 describe('ApplicationController', () => {
     let applicationController: ApplicationController;
@@ -15,9 +11,7 @@ describe('ApplicationController', () => {
     });
 
     beforeEach(async () => {
-        applicationController = new ApplicationController(
-            applicationService as any
-        );
+        applicationController = new ApplicationController(applicationService);
     });
 
     it('should return "201 - Created"', async () => {

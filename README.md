@@ -13,22 +13,31 @@
 
 <p align="center">
     <a>
-        <img src="https://img.shields.io/github/package-json/v/pedrosodre/no-covid-api?style=flat-square" alt="API Version" />
+        <img src="https://img.shields.io/github/package-json/v/pedrosodre/no-covid-api" alt="API Version" />
+    </a>
+    <a>
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=pedrosodre_no-covid-api&metric=alert_status" alt="SonarCloud">
+    </a>
+    <a>
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=pedrosodre_no-covid-api&metric=security_rating" alt="SonarCloud">
+    </a>
+    <a>
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=pedrosodre_no-covid-api&metric=coverage" alt="SonarCloud">
+    </a>
+    <a>
+        <img src="https://sonarcloud.io/api/project_badges/measure?project=pedrosodre_no-covid-api&metric=bugs" alt="SonarCloud">
     </a>
     <a href="LICENSE">
-        <img src="https://img.shields.io/github/license/pedrosodre/no-covid-api?style=flat-square" alt="License" />
+        <img src="https://img.shields.io/github/license/pedrosodre/no-covid-api" alt="License" />
     </a>
     <a href="issues">
-        <img src="https://img.shields.io/github/issues-raw/pedrosodre/no-covid-api?style=flat-square" alt="Issues" />
+        <img src="https://img.shields.io/github/issues-raw/pedrosodre/no-covid-api" alt="Issues" />
     </a>
     <a>
-        <img src="https://img.shields.io/github/package-json/dependency-version/pedrosodre/no-covid-api/typescript?style=flat-square" alt="TypeScript" />
+        <img src="https://img.shields.io/github/commit-activity/m/pedrosodre/no-covid-api" alt="GitHub Commit Activity" />
     </a>
     <a>
-        <img src="https://img.shields.io/github/commit-activity/m/pedrosodre/no-covid-api?style=flat-square" alt="GitHub Commit Activity" />
-    </a>
-    <a>
-        <img src="https://img.shields.io/github/last-commit/pedrosodre/no-covid-api?style=flat-square" alt="GitHub Last Commit" />
+        <img src="https://img.shields.io/github/last-commit/pedrosodre/no-covid-api" alt="GitHub Last Commit" />
     </a>
 </p>
 

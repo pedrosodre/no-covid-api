@@ -35,4 +35,4 @@ export class AuthorizeApplicationResponse extends DefaultResponse {
 
 }
 
-export class BlacklistJwtResponse extends DefaultResponse {};
+export class BlacklistJwtResponse extends DefaultResponse {}
