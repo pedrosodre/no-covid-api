@@ -82,7 +82,7 @@
         "collectCoverageFrom": [
             "src/**/*.ts"
         ],
-        "coverageDirectory": "../coverage",
+        "coverageDirectory": "coverage",
         "testEnvironment": "node"
     },
     "husky": {
