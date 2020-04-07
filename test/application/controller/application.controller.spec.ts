@@ -48,9 +48,7 @@ describe('ApplicationController', () => {
 
         const response = await applicationController.generateToken(
             {
-                application: {
-                    id: 'example-app'
-                }
+                application: { id: 'example-app' }
             }
         );
 
@@ -64,9 +62,7 @@ describe('ApplicationController', () => {
 
         const response = await applicationController.patchJwtToBlacklist(
             {
-                application: {
-                    id: 'example-app'
-                }
+                application: { id: 'example-app' }
             },
             { jwt }
         );
