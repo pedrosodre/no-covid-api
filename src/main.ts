@@ -1,4 +1,5 @@
 declare const module: any;
+/* istanbul ignore file */
 
 import './apm';
 

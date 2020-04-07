@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { name, version } from '../package.json';
 import apm from 'elastic-apm-node';
 

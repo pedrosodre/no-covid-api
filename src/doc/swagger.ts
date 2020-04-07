@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { DocumentBuilder } from "@nestjs/swagger";
 import { version } from '../../package.json';
 
