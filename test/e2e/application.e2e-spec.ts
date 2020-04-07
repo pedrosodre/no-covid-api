@@ -84,7 +84,7 @@ describe('ApplicationController (e2e)', () => {
             .patch('/application/token/blacklist')
             .set('Authorization', `Basic ${encodedAuth}`)
             .send({ jwt })
-            .end((err, _res) => {
+            .end((err) => {
                 if (err) return done(err);
                 done();
             });
