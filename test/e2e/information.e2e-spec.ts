@@ -13,7 +13,7 @@ describe('Information Endpoints (e2e)', () => {
     let app: INestApplication;
     let mongoServer: MongoMemoryServer;
 
-    const sampleJwt: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImV4YW1wbGUtYXBwIiwibmFtZSI6IkV4YW1wbGUgQXBwIiwicmF0ZUxpbWl0IjoxMDAwLCJhbGxvd2VkT3JpZ2lucyI6W10sImlhdCI6MTU4NjMwMTY5N30.IlqC2XQlckXdhJTstBMLqZfDIbG_Bzp8aJHWzuqClO4';
+    const sampleJwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImV4YW1wbGUtYXBwIiwibmFtZSI6IkV4YW1wbGUgQXBwIiwicmF0ZUxpbWl0IjoxMDAwLCJhbGxvd2VkT3JpZ2lucyI6W10sImlhdCI6MTU4NjMwMTY5N30.IlqC2XQlckXdhJTstBMLqZfDIbG_Bzp8aJHWzuqClO4';
 
     beforeAll(async () => {
         mongoServer = new MongoMemoryServer();
