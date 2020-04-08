@@ -14,13 +14,12 @@ import goodNewsJson from './test-data/good-news.json';
 describe('News Endpoints (e2e)', () => {
     let app: INestApplication;
     let mongoServer: MongoMemoryServer;
-
-    const sampleJwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImV4YW1wbGUtYXBwIiwibmFtZSI6IkV4YW1wbGUgQXBwIiwicmF0ZUxpbWl0IjoxMDAwLCJhbGxvd2VkT3JpZ2lucyI6W10sImlhdCI6MTU4NjMwMTY5N30.IlqC2XQlckXdhJTstBMLqZfDIbG_Bzp8aJHWzuqClO4';
+    let sampleJwt: string;
 
     beforeAll(async () => {
         mongoServer = new MongoMemoryServer();
         process.env.MONGODB_URL = await mongoServer.getUri();
-        process.env.DEFAULT_AMOUNT_RESULTS = "12";
+        process.env.DEFAULT_AMOUNT_RESULTS = '12';
         process.env.DB_NAME = '';
 
         const moduleFixture: TestingModule = await Test.createTestingModule({
@@ -32,6 +31,12 @@ describe('News Endpoints (e2e)', () => {
 
         const applicationModel = app.get('APPLICATION_MODEL');
         await applicationModel.create(applicationJson);
+
+        const encodedAuth = Buffer.from(`${applicationJson.key}:${applicationJson.secret}`, 'ascii').toString('base64');
+        const jwtResponse = await request(app.getHttpServer())
+            .post('/application/token')
+            .set('Authorization', `Basic ${encodedAuth}`);
+        sampleJwt = jwtResponse.body?.application?.jwt;
 
         const routinesModel = app.get('ROUTINES_MODEL');
         await routinesModel.insertMany(routinesJson);

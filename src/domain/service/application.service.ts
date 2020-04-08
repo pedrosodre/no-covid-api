@@ -58,7 +58,7 @@ export class ApplicationService {
     }
 
     async blacklistJwt(id: string, jwt: string): Promise<void> {
-        return this.applicationModel.update({ id }, { $push: { jwtBlacklist: jwt } })
+        return this.applicationModel.updateOne({ id }, { $push: { jwtBlacklist: jwt } })
     }
 
     private getRateLimitBasedOnType(type: string): number {
