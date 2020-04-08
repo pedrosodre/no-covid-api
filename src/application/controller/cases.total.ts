@@ -1,5 +1,4 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Case } from '../../domain/dto/cases.dto';
 import { DefaultResponse } from './response';
 
 export class TotalCases {
