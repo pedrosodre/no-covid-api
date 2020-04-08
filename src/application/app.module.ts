@@ -9,6 +9,7 @@ import { CasesCountriesController } from './controller/cases.countries.controlle
 import { CasesStatesController } from './controller/cases.states.controller';
 import { CasesCitiesController } from './controller/cases.cities.controller';
 import { NewsController } from './controller/news.controller';
+import { CasesTotalController } from './controller/cases.total.controller';
 
 import { InformationService } from '../domain/service/information.service';
 import { ApplicationService } from '../domain/service/application.service';
@@ -39,6 +40,7 @@ import { ValidateOriginMiddleware } from './middleware/validate-origin.middlewar
         CasesStatesController,
         CasesCitiesController,
         NewsController,
+        CasesTotalController,
     ],
     providers: [
         ...databaseProviders,

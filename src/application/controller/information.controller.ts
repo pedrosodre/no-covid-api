@@ -29,8 +29,8 @@ export class InformationController {
             sources: sources.map((source) => {
                 const sourceDetails = source.split('|');
                 return {
-                    name: sourceDetails?.[0],
-                    url: sourceDetails?.[1],
+                    name: sourceDetails[0],
+                    url: sourceDetails[1],
                 };
             }),
         };

@@ -26,6 +26,26 @@ export class CasesService {
             .sort({ created: -1 })
             .select({ _id: 0, created: 0, __v: 0, routineIdentifier: 0 });
     }
+
+    async getTotalWorldCases(routineIdentifier: string): Promise<any> {
+        return this.casesModel
+            .aggregate()
+            .match({ routineIdentifier })
+            .group({
+                _id: '$routineIdentifier',
+                lastUpdated: { '$first': '$lastUpdated' },
+                routine: { '$first': '$routineIdentifier' },
+                confirmedCases: { '$sum': '$confirmedCases'},
+                deaths: { '$sum': '$deaths'},
+                recovered: { '$sum': '$recovered'}
+            })
+            .project({
+                _id: 0,
+                confirmedCases: 1,
+                deaths: 1,
+                recovered: 1
+            });
+    }
 }
 
 export enum CaseTypes {
