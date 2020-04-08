@@ -1,0 +1,16 @@
+{
+    "active": true,
+    "jwtBlacklist": [],
+    "requestOrigin": [],
+    "rateLimit": 1000,
+    "id": "example-app",
+    "name": "Example App",
+    "ip": "::1",
+    "key": "sampleKey",
+    "secret": "sampleSecret",
+    "type": "server-side",
+    "ownerName": "Example Name",
+    "ownerEmail": "example@example.com",
+    "createdAt": 1586111182876,
+    "updatedAt": 1586111182876
+}

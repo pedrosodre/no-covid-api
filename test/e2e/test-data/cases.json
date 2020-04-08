@@ -1,0 +1,48 @@
+[
+    {
+        "id": "belo-horizonte",
+        "routineIdentifier": "cities-ee2ab033-873c-4b83-881e-86e518c02a45",
+        "name": "Belo Horizonte",
+        "type": "city",
+        "parent": "minas-gerais",
+        "majorParent": "brazil",
+        "confirmedCases": 237,
+        "deaths": 3,
+        "recovered": null,
+        "latitude": "-19.9227318",
+        "longitude": "-43.9450948",
+        "created": 1586110816049,
+        "lastUpdated": 1586110816049
+    },
+    {
+        "id": "minas-gerais",
+        "routineIdentifier": "states-4b53b727-03dd-479d-9a94-c5a35add811a",
+        "name": "Minas Gerais",
+        "type": "state",
+        "parent": "brazil",
+        "majorParent": null,
+        "confirmedCases": 498,
+        "deaths": 6,
+        "recovered": null,
+        "latitude": "-18.1",
+        "longitude": "-44.38",
+        "created": 1586110841930,
+        "lastUpdated": 1586110841930
+    },
+    {
+        "id": "brazil",
+        "routineIdentifier": "countries-068c6cb0-399e-40d9-a9fc-726685f0a6b6",
+        "name": "Brazil",
+        "nativeName": "Brasil",
+        "type": "country",
+        "parent": null,
+        "majorParent": null,
+        "confirmedCases": 10361,
+        "deaths": 445,
+        "recovered": 127,
+        "latitude": "-14.235004",
+        "longitude": "-51.92528",
+        "created": 1586110852726,
+        "lastUpdated": 1586110852726
+    }
+]

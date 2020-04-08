@@ -1,0 +1,32 @@
+[
+    {
+        "id": "por-que-as-criancas-sao-afetadas-de-maneira-diferente-pelo-coronavirus-bbc-news-brasil",
+        "country": "Brasil",
+        "countryCode": "BR",
+        "routineIdentifier": "news-40fe88d0-82ac-4e2f-82fd-50e33c84edb9",
+        "source": "Bbc.com",
+        "author": "https://www.facebook.com/bbcnews",
+        "title": "Por que as crianças são afetadas de maneira diferente pelo coronavírus - BBC News Brasil",
+        "description": "Elas não estão imunes à covid-19, mas parecem menos vulneráveis porque o vírus tem atingido mais suas vias aéreas superiores, em vez do pulmão; mas há registros de casos fatais",
+        "url": "https://www.bbc.com/portuguese/geral-52152324",
+        "image": "https://ichef.bbci.co.uk/news/1024/branded_portuguese/72A2/production/_111564392_getty-crianca.jpg",
+        "publishedAt": 1586094066000,
+        "createdAt": 1586110870676,
+        "updatedAt": 1586110870676
+    },
+    {
+        "id": "remedio-para-piolho-matou-novo-coronavirus-em-48-horas-afirma-especialista-o-sao-goncalo",
+        "country": "Brasil",
+        "countryCode": "BR",
+        "routineIdentifier": "news-40fe88d0-82ac-4e2f-82fd-50e33c84edb9",
+        "source": "Osaogoncalo.com.br",
+        "author": "O São Gonçalo",
+        "title": "Remédio para piolho matou novo coronavírus em 48 horas, afirma especialista - O São Gonçalo",
+        "description": "Alerta: pessoas com suspeita da Covid-19 não devem se automedicar com o produto",
+        "url": "https://www.osaogoncalo.com.br/geral/80381/remedio-para-piolho-matou-novo-coronavirus-em-48-horas-afirma-especialista",
+        "image": "https://www.osaogoncalo.com.br/img/normal/80000/microscopio_00080381_0.jpg?timestamp=05%2F04%2F2020%2009%3A26%3A52",
+        "publishedAt": 1586089769000,
+        "createdAt": 1586110871656,
+        "updatedAt": 1586110871656
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "cities-ee2ab033-873c-4b83-881e-86e518c02a45",
+        "type": "cities",
+        "createdAt": 1586110811267,
+        "updatedAt": 1586110811267
+    },
+    {
+        "id": "states-4b53b727-03dd-479d-9a94-c5a35add811a",
+        "type": "states",
+        "createdAt": 1586110839610,
+        "updatedAt": 1586110839610
+    },
+    {
+        "id": "countries-068c6cb0-399e-40d9-a9fc-726685f0a6b6",
+        "type": "countries",
+        "createdAt": 1586110848518,
+        "updatedAt": 1586110848518
+    },
+    {
+        "id": "news-40fe88d0-82ac-4e2f-82fd-50e33c84edb9",
+        "type": "news",
+        "createdAt": 1586110865392,
+        "updatedAt": 1586110865392
+    },
+    {
+        "id": "good-news-32d7a73c-bba4-471a-8791-40e57f078c17",
+        "type": "good-news",
+        "createdAt": 1586110880668,
+        "updatedAt": 1586110880668
+    }
+]

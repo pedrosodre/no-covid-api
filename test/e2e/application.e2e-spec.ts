@@ -6,7 +6,7 @@ import { AppModule } from '../../src/application/app.module';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
 
-describe('ApplicationController (e2e)', () => {
+describe('Application Endpoints (e2e)', () => {
     let app: INestApplication;
     let mongoServer: MongoMemoryServer;
 
@@ -17,21 +17,19 @@ describe('ApplicationController (e2e)', () => {
         mongoServer = new MongoMemoryServer();
         process.env.MONGODB_URL = await mongoServer.getUri();
         process.env.DB_NAME = '';
-    });
-
-    afterAll(async () => {
-        await app.close();
-        await mongoose.disconnect();
-        await mongoServer.stop();
-    });
-
-    beforeEach(async () => {
+        
         const moduleFixture: TestingModule = await Test.createTestingModule({
             imports: [AppModule],
         }).compile();
 
         app = moduleFixture.createNestApplication();
         await app.init();
+    });
+
+    afterAll(async () => {
+        await app.close();
+        await mongoose.disconnect();
+        await mongoServer.stop();
     });
 
     it('POST /application', (done) => {
@@ -46,6 +44,7 @@ describe('ApplicationController (e2e)', () => {
             })
             .end((err, res) => {
                 if (err) return done(err);
+                expect(res.body).toHaveProperty('application');
                 application = res.body.application;
                 done();
             });
@@ -56,7 +55,7 @@ describe('ApplicationController (e2e)', () => {
     });
 
     it('POST /application/token', (done) => {
-        const encodedAuth = new Buffer(`${application.key}:${application.secret}`).toString('base64');
+        const encodedAuth = Buffer.from(`${application.key}:${application.secret}`, 'ascii').toString('base64');
         const response = request(app.getHttpServer())
             .post('/application/token')
             .set('Authorization', `Basic ${encodedAuth}`)
@@ -69,6 +68,7 @@ describe('ApplicationController (e2e)', () => {
             })
             .end((err, res) => {
                 if (err) return done(err);
+                expect(res.body?.application).toHaveProperty('jwt');
                 jwt = (res.body.application && res.body.application.jwt) || null;
                 done();
             });
@@ -79,7 +79,7 @@ describe('ApplicationController (e2e)', () => {
     });
 
     it('PATCH /application/token/blacklist', (done) => {
-        const encodedAuth = new Buffer(`${application.key}:${application.secret}`).toString('base64');
+        const encodedAuth = Buffer.from(`${application.key}:${application.secret}`, 'ascii').toString('base64');
         const response = request(app.getHttpServer())
             .patch('/application/token/blacklist')
             .set('Authorization', `Basic ${encodedAuth}`)

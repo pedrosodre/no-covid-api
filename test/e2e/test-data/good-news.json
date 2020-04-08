@@ -1,0 +1,32 @@
+[
+    {
+        "id": "yahoo-noticias-sobreviventes-doam-plasma-para-tentar-salvar-outras-pessoas",
+        "country": "Brasil",
+        "countryCode": "BR",
+        "routineIdentifier": "good-news-32d7a73c-bba4-471a-8791-40e57f078c17",
+        "source": "Yahoo Notícias",
+        "author": "",
+        "title": "Sobreviventes doam plasma para tentar salvar outras pessoas",
+        "description": "",
+        "url": "https://br.financas.yahoo.com/noticias/coronav%c3%adrus-sobreviventes-doam-plasma-para-140000928.html",
+        "image": "https://s.yimg.com/ny/api/res/1.2/ooDd.t2DzwMBC7UTk0O4Ug--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/pt-br/canal_tech_990/d3fd5deb05063ee85a2a02f0a2843769",
+        "publishedAt": 1586055600000,
+        "createdAt": 1586110884774,
+        "updatedAt": 1586110884774
+    },
+    {
+        "id": "uol-como-a-inteligencia-artificial-pode-nos-tirar-do-confinamento",
+        "country": "Brasil",
+        "countryCode": "BR",
+        "routineIdentifier": "good-news-32d7a73c-bba4-471a-8791-40e57f078c17",
+        "source": "Uol",
+        "author": "",
+        "title": "Como a inteligência artificial pode nos tirar do confinamento",
+        "description": "",
+        "url": "https://www.uol.com.br/tilt/noticias/afp/2020/04/05/coronavirus-como-a-inteligencia-artificial-pode-nos-tirar-do-confinamento.htm",
+        "image": "https://conteudo.imguol.com.br/c/noticias/6e/2020/03/13/pessoa-usando-mascara-de-protecao-devido-o-coronavirus-na-rua-25-de-marco-em-sao-paulo-1584150856849_v2_900x506.jpg",
+        "publishedAt": 1586055600000,
+        "createdAt": 1586110885737,
+        "updatedAt": 1586110885737
+    }
+]

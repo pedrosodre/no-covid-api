@@ -37,6 +37,24 @@ export class NewsController {
         };
     }
 
+    @Get('good/:countryCode')
+    @ApiOkResponse({
+        description: 'Recupera a lista de notícias boas de um país relacionadas a pandemia do COVID-19.',
+        type: NewsList,
+    })
+    async getGoodNews(
+        @Param('countryCode') countryCode: string,
+    ): Promise<any> {
+        const news = await this.newsService.getGoodNewsByCountryCode(countryCode.toUpperCase());
+ 
+        return {
+            statusCode: HttpStatus.OK,
+            message: 'OK',
+            length: news.length,
+            news,
+        };
+    }
+
     @Get(':countryCode/:limit')
     @ApiOkResponse({
         description: 'Recupera a lista de notícias de um país relacionadas a pandemia do COVID-19 dado um limite de notícias.',
@@ -47,24 +65,6 @@ export class NewsController {
         @Param('limit') limit: string,
     ): Promise<any> {
         const news = await this.newsService.getNewsByCountryCode(countryCode.toUpperCase(), Number(limit));
- 
-        return {
-            statusCode: HttpStatus.OK,
-            message: 'OK',
-            length: news.length,
-            news,
-        };
-    }
-
-    @Get('good/:countryCode')
-    @ApiOkResponse({
-        description: 'Recupera a lista de notícias boas de um país relacionadas a pandemia do COVID-19.',
-        type: NewsList,
-    })
-    async getGoodNews(
-        @Param('countryCode') countryCode: string,
-    ): Promise<any> {
-        const news = await this.newsService.getGoodNewsByCountryCode(countryCode.toUpperCase());
  
         return {
             statusCode: HttpStatus.OK,
