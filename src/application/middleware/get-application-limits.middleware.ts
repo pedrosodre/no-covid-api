@@ -4,6 +4,8 @@ import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class GetApplicationLimitsMiddleware implements NestMiddleware {
+    private AUTH_TYPE: string = 'Bearer';
+
     constructor(
         private jwtService: JwtService,
     ) { }
@@ -14,10 +16,10 @@ export class GetApplicationLimitsMiddleware implements NestMiddleware {
 
         if (authorization) {
             const auth = authorization.split(' ');
-            const authType = auth ?.[0];
-            const authJwt = auth ?.[1];
+            const authType = auth[0];
+            const authJwt = auth[1];
 
-            if (authType === 'Bearer' && authJwt) {
+            if (authType === this.AUTH_TYPE && authJwt) {
                 try {
                     this.jwtService.verify(authJwt);
                     const decodedJwt: any = this.jwtService.decode(authJwt);
