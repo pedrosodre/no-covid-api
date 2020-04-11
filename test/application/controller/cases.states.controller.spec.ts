@@ -1,5 +1,4 @@
 import { CasesStatesController } from '../../../src/application/controller/cases.states.controller';
-import { NotFoundException } from '@nestjs/common';
 
 const stateCase = {
     id: 'minas-gerais',

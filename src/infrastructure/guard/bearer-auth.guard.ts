@@ -22,8 +22,8 @@ export class BearerAuthGuard implements CanActivate {
         if (!authorization) return false;
 
         const auth = authorization.split(' ');
-        const authType = auth ?.[0];
-        const authJwt = auth ?.[1];
+        const authType = auth[0];
+        const authJwt = auth[1];
 
         if (authType !== 'Bearer' || !authJwt) return false;
 

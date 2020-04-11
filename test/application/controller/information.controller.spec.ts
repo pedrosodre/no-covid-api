@@ -2,7 +2,7 @@ import { InformationController } from '../../../src/application/controller/infor
 
 describe('InformationController', () => {
     let informationController: InformationController;
-    let informationService;
+    let informationService: any;
 
     beforeAll(() => {
         process.env.SOURCES = 'Wikipedia|https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic';

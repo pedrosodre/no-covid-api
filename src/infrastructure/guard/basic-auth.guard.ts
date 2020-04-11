@@ -20,9 +20,9 @@ export class BasicAuthGuard implements CanActivate {
         if (!authorization) return false;
 
         const auth = authorization.split(' ');
-        const authType = auth?.[0];
-        const authKeys = Buffer.from(auth?.[1], 'base64').toString('ascii').split(':');
-
+        const authType = auth[0];
+        const authKeys = auth[1] && Buffer.from(auth[1], 'base64').toString('ascii').split(':');
+        
         const authKey = authKeys?.[0];
         const authSecret = authKeys?.[1];
         
