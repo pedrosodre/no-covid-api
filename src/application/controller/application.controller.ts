@@ -75,7 +75,7 @@ export class ApplicationController {
         type: BlacklistJwtResponse,
     })
     async patchJwtToBlacklist(@Request() request, @Body() dto: BlacklistJwtDto): Promise<any> {
-        await this.applicationService.blacklistJwt(request.application.id, dto.jwt);
+        await this.applicationService.denyToken(request.application.id, dto.jwt);
 
         return {
             statusCode: HttpStatus.OK,

@@ -9,7 +9,7 @@ describe('ApplicationController', () => {
         applicationService = {
             setApplication: jest.fn(),
             authorize: jest.fn(),
-            blacklistJwt: jest.fn(),
+            denyToken: jest.fn(),
         };
     });
 
@@ -58,7 +58,7 @@ describe('ApplicationController', () => {
     });
 
     it('patchJwtToBlacklist() should return "200 - OK"', async () => {
-        applicationService.blacklistJwt.mockImplementation();
+        applicationService.denyToken.mockImplementation();
 
         const response = await applicationController.patchJwtToBlacklist(
             {

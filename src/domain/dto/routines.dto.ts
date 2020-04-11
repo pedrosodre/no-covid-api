@@ -1,4 +1,3 @@
-/* istanbul ignore file */
 import { RoutineTypes } from "../service/routines.service";
 
 export class Routine {

@@ -57,7 +57,7 @@ export class ApplicationService {
         });
     }
 
-    async blacklistJwt(id: string, jwt: string): Promise<void> {
+    async denyToken(id: string, jwt: string): Promise<void> {
         return this.applicationModel.updateOne({ id }, { $push: { jwtBlacklist: jwt } })
     }
 
