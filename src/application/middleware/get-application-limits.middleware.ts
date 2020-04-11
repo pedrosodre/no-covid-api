@@ -4,7 +4,7 @@ import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class GetApplicationLimitsMiddleware implements NestMiddleware {
-    private AUTH_TYPE: string = 'Bearer';
+    private AUTH_TYPE = 'Bearer';
 
     constructor(
         private jwtService: JwtService,
