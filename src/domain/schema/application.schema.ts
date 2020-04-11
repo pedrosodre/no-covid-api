@@ -7,7 +7,7 @@ export const ApplicationSchema = new Schema({
     ip: { type: String, required: true, trim: true },
     key: { type: String, required: true, trim: true },
     secret: { type: String, required: true, trim: true },
-    jwtBlacklist: [{ type: String, trim: true }],
+    rejectedJwts: [{ type: String, trim: true }],
     type: { type: String, required: true, trim: true, enum: ['client-side', 'server-side'] },
     requestOrigin: [{ type: String, required: true, trim: true }],
     rateLimit: { type: Number, default: 10 },

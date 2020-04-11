@@ -9,7 +9,7 @@ describe('ApplicationController', () => {
         applicationService = {
             setApplication: jest.fn(),
             authorize: jest.fn(),
-            denyToken: jest.fn(),
+            rejectToken: jest.fn(),
         };
     });
 
@@ -57,10 +57,10 @@ describe('ApplicationController', () => {
         expect(response.application.jwt).toBe(jwt);
     });
 
-    it('patchJwtToBlacklist() should return "200 - OK"', async () => {
-        applicationService.denyToken.mockImplementation();
+    it('patchJwtToRejectList() should return "200 - OK"', async () => {
+        applicationService.rejectToken.mockImplementation();
 
-        const response = await applicationController.patchJwtToBlacklist(
+        const response = await applicationController.patchJwtToRejectList(
             {
                 application: { id: 'example-app' }
             },

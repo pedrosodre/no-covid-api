@@ -57,8 +57,8 @@ export class ApplicationService {
         });
     }
 
-    async denyToken(id: string, jwt: string): Promise<void> {
-        return this.applicationModel.updateOne({ id }, { $push: { jwtBlacklist: jwt } })
+    async rejectToken(id: string, jwt: string): Promise<void> {
+        return this.applicationModel.updateOne({ id }, { $push: { rejectedJwts: jwt } })
     }
 
     private getRateLimitBasedOnType(type: string): number {

@@ -85,8 +85,8 @@ describe('ApplicationService', () => {
         expect(jwtService.sign).toBeCalled();
     });
 
-    it('denyToken() should update application to deny a jwt', async () => {
-        await service.denyToken(kebabCase(dto.name), 'token');
+    it('rejectToken() should update application to deny a jwt', async () => {
+        await service.rejectToken(kebabCase(dto.name), 'token');
 
         expect(applicationModel.updateOne).toBeCalled();
     });

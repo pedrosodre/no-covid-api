@@ -1,6 +1,6 @@
 {
     "active": true,
-    "jwtBlacklist": [],
+    "rejectedJwts": [],
     "requestOrigin": [],
     "rateLimit": 1000,
     "id": "example-app",

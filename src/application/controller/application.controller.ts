@@ -17,12 +17,12 @@ import {
 } from '@nestjs/swagger';
 import {
     NewApplicationDto,
-    BlacklistJwtDto,
+    RejectJwtDto,
 } from '../../domain/dto/application.dto';
 import {
     SetApplicationResponse,
     AuthorizeApplicationResponse,
-    BlacklistJwtResponse,
+    RejectJwtResponse,
 } from './application';
 import { BasicAuthGuard } from '../../infrastructure/guard/basic-auth.guard';
 
@@ -67,15 +67,15 @@ export class ApplicationController {
         };
     }
 
-    @Patch('token/blacklist')
+    @Patch('token/reject')
     @UseGuards(BasicAuthGuard)
     @ApiBasicAuth()
     @ApiOkResponse({
-        description: 'Realiza a inclusão de um token JWT na blacklist da sua aplicação.',
-        type: BlacklistJwtResponse,
+        description: 'Realiza a inclusão de um token JWT na lista de rejeição da sua aplicação.',
+        type: RejectJwtResponse,
     })
-    async patchJwtToBlacklist(@Request() request, @Body() dto: BlacklistJwtDto): Promise<any> {
-        await this.applicationService.denyToken(request.application.id, dto.jwt);
+    async patchJwtToRejectList(@Request() request, @Body() dto: RejectJwtDto): Promise<any> {
+        await this.applicationService.rejectToken(request.application.id, dto.jwt);
 
         return {
             statusCode: HttpStatus.OK,

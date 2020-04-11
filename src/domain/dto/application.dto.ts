@@ -47,7 +47,7 @@ export class NewApplicationDto {
     ownerEmail: string;
 }
 
-export class BlacklistJwtDto {
+export class RejectJwtDto {
     @ApiProperty()
     @IsString()
     jwt: string;

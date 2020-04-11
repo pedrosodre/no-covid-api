@@ -78,10 +78,10 @@ describe('Application Endpoints (e2e)', () => {
             .expect('Content-Type', /json/);
     });
 
-    it('PATCH /application/token/blacklist', (done) => {
+    it('PATCH /application/token/reject', (done) => {
         const encodedAuth = Buffer.from(`${application.key}:${application.secret}`, 'ascii').toString('base64');
         const response = request(app.getHttpServer())
-            .patch('/application/token/blacklist')
+            .patch('/application/token/reject')
             .set('Authorization', `Basic ${encodedAuth}`)
             .send({ jwt })
             .end((err) => {
