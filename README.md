@@ -34,9 +34,6 @@
         <img src="https://img.shields.io/github/issues-raw/pedrosodre/no-covid-api" alt="Issues" />
     </a>
     <a>
-        <img src="https://img.shields.io/github/commit-activity/m/pedrosodre/no-covid-api" alt="GitHub Commit Activity" />
-    </a>
-    <a>
         <img src="https://img.shields.io/github/last-commit/pedrosodre/no-covid-api" alt="GitHub Last Commit" />
     </a>
 </p>
