@@ -9,12 +9,12 @@ export class ValidateOriginMiddleware implements NestMiddleware {
         if (allowedOrigins && allowedOrigins.length > 0) {
             const origin = req.header('origin');
             if (!origin)
-                res.setHeader('Access-Control-Allow-Origin', `https://${allowedOrigins ?.[0]}`);
+                res.setHeader('Access-Control-Allow-Origin', `https://${allowedOrigins[0]}`);
             else {
                 const parseOrigin = url.parse(origin).hostname;
                 res.setHeader(
                     'Access-Control-Allow-Origin',
-                    allowedOrigins.includes(parseOrigin) ? origin : `https://${allowedOrigins ?.[0]}`
+                    allowedOrigins.includes(parseOrigin) ? origin : `https://${allowedOrigins[0]}`
                 );
             }
         }
